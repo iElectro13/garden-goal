@@ -1,0 +1,32 @@
+.Formulario{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #B4A4FC16;
+    width: 60%;
+    height: 40vh;
+    border-radius: 25px;
+}
+
+h1,b,input{
+    color: white;
+}
+
+input{
+    text-align: center;
+    width: 70%;
+    border-radius: 25px;
+    padding: .5rem;
+    border: 0;
+    background-color: #ffffff20;
+}
+
+button{
+    border-radius: 25px;
+    color: #1B2B43;
+    background-color: white;
+    padding: .3rem 1.5rem .3rem 1.5rem;
+    border: 0;
+}
