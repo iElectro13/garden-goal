@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './App.css';
 import TestComponent from './components/TestComponent';
 
@@ -15,6 +16,17 @@ function App() {
       <TestComponent/>
       
     </div>
+=======
+// import { SingIn } from "./pages/SingIn/SingIn";
+import LogIn from "./pages/LogIn/LogIn"
+
+function App() {
+  return (
+      <>
+        {/* <SingIn/> */}
+        <LogIn/>
+      </>
+>>>>>>> main
   );
 }
 
