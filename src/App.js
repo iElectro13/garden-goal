@@ -1,5 +1,5 @@
 import "./App.css";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar/Navbar.jsx";
 
 function App() {
   return (
@@ -8,5 +8,4 @@ function App() {
     </>
   );
 }
-
 export default App;

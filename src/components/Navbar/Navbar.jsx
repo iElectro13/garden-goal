@@ -1,54 +1,50 @@
 import React from "react";
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
+import Buttons from "../Buttons/Buttons.jsx";
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-white">
+    <nav className="bg-white lg:flex">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-around h-16">
+        <div className="flex items-center justify-between h-16">
           <div className="flex items-center  justify-around">
-            <span className="font-extrabold text-xl text-blueDark">
+            <span className="font-extrabold sm:text-3xl text-2xl text-blueDark">
               Garden Goal
             </span>
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a
                   href="!#"
-                  className="text-blueDark px-3 py-2 rounded-md font-medium font-bold"
+                  className="text-blueDark px-3 py-2 rounded-md text-2xl font-medium font-bold"
                 >
                   About
                 </a>
                 <a
                   href="!#"
-                  className="text-blueDark px-3 py-2 rounded-md font-medium font-bold"
+                  className="text-blueDark px-3 py-2 rounded-md text-2xl font-medium font-bold"
                 >
                   Contacts
                 </a>
 
                 <a
                   href="!#"
-                  className="text-blueDark px-3 py-2 rounded-md font-medium font-bold"
+                  className="text-blueDark px-3 py-2 rounded-md text-2xl font-medium font-bold"
                 >
                   Credits
                 </a>
-
-                <button
-                  type="button"
-                  className="text-white bg-purple hover:bg-primary font-medium font-bold rounded-full text-base px-6 py-1 text-center mx-3 md:mr-0"
-                >
-                  Log in
-                </button>
-                <button
-                  type="button"
-                  className="text-white bg-blueDark hover:bg-primary font-medium font-bold rounded-full text-base px-6 py-1 text-center mx-3 md:mr-0"
-                >
-                  Sign up
-                </button>
+                <div className="flex gap-4">
+                  <Buttons
+                    value="Log in"
+                    extra="bg-purple text-blueDark hover:bg-blueDark hover:text-white"
+                  />
+                  <Buttons typeBtn="purpleDark" value="Sign up" />
+                </div>
               </div>
             </div>
           </div>
-          <div className="-mr-2 flex md:hidden">
+          <div className="-mr-2 flex lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -112,37 +108,32 @@ export const Navbar = () => {
             >
               <a
                 href="!#"
-                className="text-blueDark font-bold hover:bg-purple hover:text-white block px-3 py-2 text-center rounded-md text-base font-medium"
+                className="text-blueDark font-bold hover:bg-purple  block px-3 py-2 text-center rounded-md text-base font-medium"
               >
                 About
               </a>
 
               <a
                 href="!#"
-                className="text-blueDark font-bold hover:bg-purple hover:text-white block px-3 py-2 text-center rounded-md text-base font-medium"
+                className="text-blueDark font-bold hover:bg-purple  block px-3 py-2 text-center rounded-md text-base font-medium"
               >
                 Contacts
               </a>
 
               <a
                 href="!#"
-                className="text-blueDark font-bold hover:bg-purple hover:text-white block px-3 py-2 text-center rounded-md text-base font-medium"
+                className="text-blueDark font-bold hover:bg-purple  block px-3 py-2 text-center rounded-md text-base font-medium"
               >
                 Credits
               </a>
 
-              <button
-                type="button"
-                className="text-white bg-purple hover:bg-primary font-medium font-bold rounded-full text-base px-6 py-1 text-center mx-3 md:mr-0"
-              >
-                Log in
-              </button>
-              <button
-                type="button"
-                className="text-white bg-blueDark hover:bg-primary font-medium font-bold rounded-full text-base px-6 py-1 text-center  mx-3 md:mr-0"
-              >
-                Sign up
-              </button>
+              <div className="flex flex-col w-1/2 justify-center mx-auto gap-4">
+                <Buttons
+                  value="Log in"
+                  extra="bg-purple text-blueDark hover:bg-blueDark hover:text-white"
+                />
+                <Buttons typeBtn="purpleDark" value="Sign up" />
+              </div>
             </div>
           </div>
         )}
