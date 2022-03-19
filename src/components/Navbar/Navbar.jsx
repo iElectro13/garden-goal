@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
-import Buttons from "../Buttons/Buttons.jsx";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,11 +34,8 @@ export const Navbar = () => {
                   Credits
                 </a>
                 <div className="flex gap-4">
-                  <Buttons
-                    value="Log in"
-                    extra="bg-purple text-blueDark hover:bg-blueDark hover:text-white"
-                  />
-                  <Buttons typeBtn="purpleDark" value="Sign up" />
+                  <button className='btn-primary'>Log in</button>
+                  <button className='btn-purple'>Sign up</button>
                 </div>
               </div>
             </div>
@@ -128,11 +124,8 @@ export const Navbar = () => {
               </a>
 
               <div className="flex flex-col w-1/2 justify-center mx-auto gap-4">
-                <Buttons
-                  value="Log in"
-                  extra="bg-purple text-blueDark hover:bg-blueDark hover:text-white"
-                />
-                <Buttons typeBtn="purpleDark" value="Sign up" />
+                <button className='btn-primary'>Log in</button>
+                <button className='btn-purple'>Sign up</button>
               </div>
             </div>
           </div>
