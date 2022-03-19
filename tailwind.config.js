@@ -9,6 +9,9 @@ module.exports = {
         primary: "#6951EB",
         blueDark: "#1B2B43",
         white: "#F9F2F5",
+      },
+      fontFamily: {
+        'montserrat': ['"Montserrat"']
       }
     },
   },

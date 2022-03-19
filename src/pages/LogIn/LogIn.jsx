@@ -6,18 +6,18 @@ import '../LogIn/LogIn.css'
 
 const LogIn = () => {
     return (
-        <div className='Login-container'>
-            <div className='nav'>
+        <div className='flex flex-col justify-around'>
+            <div className='m-auto w-5/6 flex justify-between items-center'>
                 <h1>Garden Goal</h1>
                 <button>Sing Up</button>
             </div>
-            <div className='cuerpo'>
-                <img src={planta} alt="" />
+            <div className='flex m-auto w-11/12 items-center'>
+                <img className='w-2/5' src={planta} alt="" />
                 <AuthForm/>
             </div>
-            <div className='foot'>
+            <div className='fixed w-3/4 flex justify-around items-center bottom-0 right-0'>
                 <h3>© Garden Goal, 2022</h3>
-                <img src={GGwhite} alt="" />
+                <img className='w-1/12' src={GGwhite} alt="" />
             </div>
         </div>
     )
